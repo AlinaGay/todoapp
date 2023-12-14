@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root "pages#home"
   get '/about', to: 'pages#about'
   get '/help-page', to: 'pages#help_page'
+
+  resources :todos
   # Defines the root path route ("/")
   # root "posts#index"
 end
