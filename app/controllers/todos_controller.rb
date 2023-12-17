@@ -14,7 +14,12 @@ def create
   end  
 end
 
+def show
+  @todo = Todo.find(params[:id])
+end
+
 private
+
   def todo_params
     params.require(:todo).permit(:name, :descriptions)
   end
