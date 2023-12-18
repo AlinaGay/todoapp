@@ -9,16 +9,16 @@
   </ul>
 <% end %>   
  
-<%= form_for @todo do |f| %>
+<%= form_for @todo do |todo_form| %>
   <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= todo_form.label :name %><br>
+    <%= todo_form.text_field :name %>
   </p>
   <p>
-    <%= f.label :descriptions %><br>
-    <%= f.text_area :descriptions %>
+    <%= todo_form.label :descriptions %><br>
+    <%= todo_form.text_area :descriptions %>
   </p>
   <p>
-    <%= f.submit %><br>
+    <%= todo_form.submit %><br>
   </p>
 <% end %>  
