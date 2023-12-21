@@ -1,0 +1,13 @@
+<h1>Listing all Todos</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% @todo.each do |todo| %>
+    <tr>
+      <td><%= todo.name %></td>
+      <td><%= todo.descriptions %></td>
+    </tr> 
+  <% end %>   
+</table>
