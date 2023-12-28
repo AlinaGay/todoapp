@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_action :set_todo, only:[:edit, :update, :show, :destroy]
   
   def new
-    todo = Todo.new
+    @todo = Todo.new
   end
 
   def create
@@ -22,7 +22,7 @@ class TodosController < ApplicationController
   end
 
   def update
-    if todo.update(todo_params)
+    if @todo.update(todo_params)
       flash[:notice] = "Todo was successfully updated"
       redirect_to todo_path(todo)
     else
